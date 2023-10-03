@@ -1,5 +1,7 @@
-import Sale from '../models/Sale.model.js'
-import { updateDataInvoice, updateFlagInvoice } from '../utils/purchaseData.js';
+// import Sale from '../models/Sale.model.js'
+// import { updateDataInvoice, updateFlagInvoice } from '../utils/purchaseData.js';
+const Sale=require('../models/Sale.model.js')
+const { updateDataInvoice, updateFlagInvoice }=require('../utils/purchaseData.js');
 
 
 
@@ -45,7 +47,11 @@ const updateSaleFlag= async(saleCode, data)=>{
     }
 }
 
-export { 
+// export { 
+//     updateSaleFlag,
+//     emailStatus,
+// }
+module.exports ={ 
     updateSaleFlag,
     emailStatus,
 }

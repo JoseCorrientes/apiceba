@@ -1,8 +1,9 @@
-import CryptoJS from 'crypto-js';
+// import CryptoJS from 'crypto-js';
+const CryptoJS=require('crypto-js');
 
 let key = process.env.KEY_PASS_INTERNAL;
 
-export function EncryptInterData(param){
+function EncryptInterData(param){
 
   const textEncrypt = CryptoJS.AES.encrypt(JSON.stringify(param), key).toString()
   return textEncrypt;
@@ -11,7 +12,7 @@ export function EncryptInterData(param){
 };
 
 
-export function DecryptInterData(param){
+function DecryptInterData(param){
 
 
   let decryptedObject = JSON.parse(CryptoJS.AES.decrypt(param,key).toString(CryptoJS.enc.Utf8))
@@ -19,3 +20,6 @@ export function DecryptInterData(param){
 
 
 };
+
+
+module.exports = {DecryptInterData,EncryptInterData};

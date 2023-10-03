@@ -1,12 +1,21 @@
-import {
+// import {
+//   EncryptInterData,
+//   DecryptInterData,
+// } from "../utils/encryptionInternal.js";
+// import {
+//   encryptableData,
+//   dataDecryptation,
+// } from "../utils/encryptionMarket.js";
+// import {purchaseDataInfo, getDataInvoice} from "../utils/purchaseData.js";
+const {
   EncryptInterData,
   DecryptInterData,
-} from "../utils/encryptionInternal.js";
-import {
+}=require("../utils/encryptionInternal.js");
+const {
   encryptableData,
   dataDecryptation,
-} from "../utils/encryptionMarket.js";
-import {purchaseDataInfo, getDataInvoice} from "../utils/purchaseData.js";
+} =require("../utils/encryptionMarket.js");
+const {purchaseDataInfo, getDataInvoice}=require("../utils/purchaseData.js");
 
 
 const encryptDataService = async (data) => {
@@ -57,4 +66,5 @@ const decryptDataService = async (userData, sessionID) => {
   return encrypt;
 };
 
-export { encryptDataService, decryptDataService };
+// export { encryptDataService, decryptDataService };
+module.exports = { encryptDataService, decryptDataService };

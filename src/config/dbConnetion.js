@@ -1,8 +1,14 @@
-import mongoose from "mongoose";
-import Colors from '@colors/colors'
+// import mongoose from "mongoose";
+// import Colors from '@colors/colors'
+const mongoose = require('mongoose');
+const Colors = require('@colors/colors');
+
 
 const {DB_URI} = process.env;
-export const connectDB = async () => {
+
+
+// export const connectDB = async () => {
+const connectDB = async () => {
 
   try {
     mongoose.set('strictQuery', false);
@@ -12,3 +18,5 @@ export const connectDB = async () => {
     console.log(Colors.bgBrightRed.black(`** Error Connecting to DataBase -- [${error}] **`));
   }
 }
+
+module.exports=connectDB;

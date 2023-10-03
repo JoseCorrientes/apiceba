@@ -1,5 +1,7 @@
-import Sale from "../models/Sale.model.js";
-import Colors from '@colors/colors';
+// import Sale from "../models/Sale.model.js";
+// import Colors from '@colors/colors';
+const Sale=require("../models/Sale.model.js");
+const Colors=require('@colors/colors');
 
 
 const purchaseDataInfo = async (dataSale, customerData, userSession) => {
@@ -82,7 +84,13 @@ try {
 
 
 
-export {
+// export {
+//   purchaseDataInfo,
+//   getDataInvoice,
+//   updateDataInvoice,
+//   updateFlagInvoice,
+// };
+module.exports = {
   purchaseDataInfo,
   getDataInvoice,
   updateDataInvoice,

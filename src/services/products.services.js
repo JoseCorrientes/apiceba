@@ -1,5 +1,7 @@
-import Products from "../models/Products.model.js";
-import { seedProductsData } from "../data/seedProducts.js";
+// import Products from "../models/Products.model.js";
+// import { seedProductsData } from "../data/seedProducts.js";
+const{Products}=require("../models/Products.model.js");
+const { seedProductsData }=require("../data/seedProducts.js");
 
 
 
@@ -57,41 +59,10 @@ const updatePreBookingService = async (_id, preBooking, option) => {
 
 }
 
-export {
+module.exports= {
   getAllProductsService,
   getOneProductService,
   createProductService,
   updatePreBookingService,
 }
 
-
-// const MongoClient = require("mongodb").MongoClient;
-
-// const client = new MongoClient("mongodb://localhost:27017");
-
-// client.connect((err) => {
-//   if (err) {
-//     console.log(err);
-//     return;
-//   }
-
-//   const db = client.db("my_database");
-//   const collection = db.collection("my_collection");
-
-//   // Find the document to update
-//   const document = collection.findOne({"name": "John"})
-
-//   // Get the current value of the field to update
-//   const currentValue = document.age;
-
-//   // Add the value to update
-//   const newValue = currentValue + 10;
-
-//   // Update the document
-//   collection.updateOne({"name": "John"}, {"$set": {"age": newValue}})
-
-//   // Print the updated document
-//   console.log(collection.findOne({"name": "John"}))
-
-//   client.close();
-// });

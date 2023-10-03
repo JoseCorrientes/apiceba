@@ -1,4 +1,6 @@
-import { webcrypto } from "node:crypto";
+// import { webcrypto } from "node:crypto";
+const { webcrypto }=require("node:crypto");
+
 
 const { subtle } = webcrypto;
 
@@ -75,7 +77,7 @@ async function createKey() {
 
 
 
-export async function encryptableData(payload) {
+async function encryptableData(payload) {
   try {
     const keyPromise = createKey();
     const ivParameterspec = new Uint8Array(iv);
@@ -100,7 +102,7 @@ export async function encryptableData(payload) {
 
 // ***********************************************************************************************************
 
-export async function dataDecryptation(encryptedData) {
+async function dataDecryptation(encryptedData) {
 
   try {
 
@@ -138,7 +140,7 @@ export async function dataDecryptation(encryptedData) {
 }
 
 
-
+module.exports={dataDecryptation,encryptableData,createKey}
 
 
 

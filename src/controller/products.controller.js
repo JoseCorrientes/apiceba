@@ -1,6 +1,9 @@
-import Colors from '@colors/colors';
-import { matchedData } from 'express-validator';
-import { getAllProductsService, getOneProductService, createProductService, updatePreBookingService } from '../services/products.services.js';
+// import Colors from '@colors/colors';
+// import { matchedData } from 'express-validator';
+// import { getAllProductsService, getOneProductService, createProductService, updatePreBookingService } from '../services/products.services.js';
+const Colors=require('@colors/colors');
+const { matchedData }=require('express-validator');
+const { getAllProductsService, getOneProductService, createProductService, updatePreBookingService }=require('../services/products.services.js');
 
 
 const getAllProducts = async (req, res) => {
@@ -73,7 +76,13 @@ const updatePreBooking = async (req, res) => {
 }
 
 
-export {
+// export {
+//   getAllProducts,
+//   getProductById,
+//   createProducts,
+//   updatePreBooking,
+// }
+module.exports ={
   getAllProducts,
   getProductById,
   createProducts,

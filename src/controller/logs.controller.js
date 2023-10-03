@@ -1,7 +1,9 @@
-import Colors from '@colors/colors';
-import { matchedData } from 'express-validator';
-import { getAllLogsService, createLogsService } from '../services/logs.services.js';
-
+// import Colors from '@colors/colors';
+// import { matchedData } from 'express-validator';
+// import { getAllLogsService, createLogsService } from '../services/logs.services.js';
+const Colors = require ('@colors/colors')
+const { matchedData } =require('express-validator');
+const { getAllLogsService, createLogsService } = require('../services/logs.services.js');
 
 const getAllLogsController = async (req, res) => {
 
@@ -33,7 +35,11 @@ const createLogController = async (req, res) => {
     
 
 
-export {
+// export {
+//   getAllLogsController,
+//   createLogController,
+// }
+module.exports= {
   getAllLogsController,
   createLogController,
 }

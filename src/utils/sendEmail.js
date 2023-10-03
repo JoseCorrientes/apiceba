@@ -1,4 +1,5 @@
-import SiBApi from "sib-api-v3-sdk";
+// import SiBApi from "sib-api-v3-sdk";
+const SiBApi=require("sib-api-v3-sdk");
 
 async function sendEmail(data) {
   try {
@@ -75,4 +76,5 @@ async function sendEmail(data) {
   }
 }
 
-export { sendEmail };
+// export { sendEmail };
+module.exports ={ sendEmail };

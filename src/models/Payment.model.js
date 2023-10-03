@@ -1,4 +1,6 @@
-import { Schema, model } from "mongoose";
+// import { Schema, model } from "mongoose";
+const { Schema, model } require=("mongoose");
+
 
 const paymentSchema = new Schema({
   paid_status: {
@@ -38,4 +40,5 @@ const paymentSchema = new Schema({
 });
 
 const Payment = model('Payment', paymentSchema);
-export default Payment;
+// export default Payment;
+module.exports={Payment};

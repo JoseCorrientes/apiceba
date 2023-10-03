@@ -1,6 +1,7 @@
 
 
-export const seedProductsData = [
+// export const seedProductsData = [
+const seedProductsData = [
   {
     productName: 'CABANO X 12 UNIDADES',
     description: `Si quieres recompensar a tu perro porque se ha portado bien, los premios Ceba son una buena opción. Saludables para tu perro, son juguetes en carnaza con forma de cilíndrica multicolor, muy útiles para entrenarlo y educarlo.`,
@@ -411,4 +412,4 @@ export const seedProductsData = [
 ]
 
 
-
+module.exports=seedProductsData;

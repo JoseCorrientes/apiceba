@@ -1,9 +1,22 @@
-import Colors from "@colors/colors";
-import { paymentService } from "../services/payment.services.js";
-import { updateSaleFlag, emailStatus } from "../services/sale.services.js";
-import { createLogsService } from "../services/logs.services.js";
-import { sendEmail } from "../utils/sendEmail.js";
-import { getDataInvoice } from "../utils/purchaseData.js";
+// import Colors from "@colors/colors";
+// import { paymentService } from "../services/payment.services.js";
+// import { updateSaleFlag, emailStatus } from "../services/sale.services.js";
+// import { createLogsService } from "../services/logs.services.js";
+// import { sendEmail } from "../utils/sendEmail.js";
+// import { getDataInvoice } from "../utils/purchaseData.js";
+const Colors = require("@colors/colors");
+const { paymentService } =require("../services/payment.services.js");
+const { updateSaleFlag, emailStatus }=require("../services/sale.services.js");
+const { createLogsService } =require("../services/logs.services.js");
+const { sendEmail }=require("../utils/sendEmail.js");
+const { getDataInvoice } =require("../utils/purchaseData.js");
+
+
+
+
+
+
+
 
 const paymentConfirmation = async (req, res) => {
   try {
@@ -171,5 +184,6 @@ const paymentConfirmation = async (req, res) => {
   }
 };
 
-export { paymentConfirmation };
+// export { paymentConfirmation };
+module.exports = { paymentConfirmation };
 

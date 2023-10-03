@@ -1,4 +1,6 @@
-import Logs from "../models/Logs.model.js";
+// import Logs from "../models/Logs.model.js";
+const {Logs} =require("../models/Logs.model.js");
+
 
 const getAllLogsService = async () => {
 
@@ -16,7 +18,11 @@ const createLogsService = async (logs) => {
 
 
 
-export {
+// export {
+//   getAllLogsService,
+//   createLogsService
+// }
+module.exports={
   getAllLogsService,
   createLogsService
 }

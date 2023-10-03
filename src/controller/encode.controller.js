@@ -1,8 +1,12 @@
-import Colors from "@colors/colors";
-import {
-  encryptDataService,
-  decryptDataService,
-} from "../services/encode.services.js";
+// import Colors from "@colors/colors";
+// import {
+//   encryptDataService,
+//   decryptDataService,
+// } from "../services/encode.services.js";
+const Colors = require('@colors/colors');
+const { encryptDataService, decryptDataService} = require('../services/encode.services.js')
+
+
 
 const encryptData = async (req, res) => {
   const { data } = req.body;
@@ -29,4 +33,5 @@ const decryptData = async (req, res) => {
   }
 };
 
-export { encryptData, decryptData };
+// export { encryptData, decryptData };
+module.exports= {encryptData, decryptData }

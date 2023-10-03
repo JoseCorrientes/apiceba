@@ -1,5 +1,7 @@
-import { validationResult } from "express-validator";
-import Colors from '@colors/colors';
+// import { validationResult } from "express-validator";
+// import Colors from '@colors/colors';
+const { validationResult }=require("express-validator");
+const Colors =require('@colors/colors');
 
 const validateResulst = (req, res, next) => {
   try {
@@ -14,4 +16,5 @@ const validateResulst = (req, res, next) => {
 
 }
 
-export default validateResulst;
+// export default validateResulst;
+module.exports = validateResulst;

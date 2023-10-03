@@ -1,4 +1,5 @@
-import { Schema, model } from "mongoose";
+// import { Schema, model } from "mongoose";
+const { Schema, model }=require("mongoose");
 
 const logsSchema = new Schema({
   ip: {
@@ -34,4 +35,7 @@ const logsSchema = new Schema({
 });
 
 const Logs = model('Logs', logsSchema);
-export default Logs;
+
+
+// export default Logs;
+module.export={Logs};

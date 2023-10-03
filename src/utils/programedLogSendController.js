@@ -1,4 +1,5 @@
-import { getAllLogsService} from './programedLogSendService.js';
+// import { getAllLogsService} from './programedLogSendService.js';
+const { getAllLogsService}=require('./programedLogSendService.js');
 
 
 const getAllLogsController = async (req, res) => {
@@ -13,4 +14,5 @@ const getAllLogsController = async (req, res) => {
   }
 };
 
-export { getAllLogsController};
+module.exports ={ getAllLogsController};
+// export { getAllLogsController};

@@ -1,4 +1,5 @@
-import Payment from "../models/Payment.model.js";
+// import Payment from "../models/Payment.model.js";
+const {Payment}=require("../models/Payment.model.js");
 
 
 
@@ -19,6 +20,9 @@ const paymentService = async (data) => {
 
 
 
-export {
+// export {
+//   paymentService,
+// }
+module.exports= {
   paymentService,
 }

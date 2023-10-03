@@ -1,5 +1,7 @@
-import { check } from 'express-validator';
-import validateResulst from '../../utils/handleErrorValidations.js';
+// import { check } from 'express-validator';
+// import validateResulst from '../../utils/handleErrorValidations.js';
+const { check }=require('express-validator');
+const validateResulst =require('../../utils/handleErrorValidations.js');
 
 
 const validatorPreBooking = [
@@ -21,4 +23,5 @@ const validatorPreBooking = [
 
 
 
-export {validatorPreBooking};
+module.exports = {validatorPreBooking};
+// export {validatorPreBooking};

@@ -1,4 +1,5 @@
-import { Schema, model } from "mongoose";
+// import { Schema, model } from "mongoose";
+const { Schema, model }=require("mongoose");
 
 const saleSchema = new Schema({
   saleCode: {
@@ -53,4 +54,5 @@ const saleSchema = new Schema({
 });
 
 const Sale = model('Sale', saleSchema);
-export default Sale;
+// export default Sale;
+module.exports ={Sale};

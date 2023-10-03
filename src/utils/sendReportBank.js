@@ -1,5 +1,7 @@
-import SiBApi from "sib-api-v3-sdk";
-import pdfToBase64 from "pdf-to-base64";
+// import SiBApi from "sib-api-v3-sdk";
+// import pdfToBase64 from "pdf-to-base64";
+const SiBApi =require("sib-api-v3-sdk");
+const pdfToBase64 =require("pdf-to-base64");
 
 async function sendReportBank(today) {
   
@@ -72,4 +74,5 @@ async function sendReportBank(today) {
   }
 }
 
-export { sendReportBank };
+// export { sendReportBank };
+module.exports = { sendReportBank };
