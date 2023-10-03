@@ -1,0 +1,31 @@
+{
+  "name": "api-marketplace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@colors/colors": "^1.6.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.6.0",
+    "mongoose": "^7.4.0",
+    "morgan": "^1.10.0",
+    "node-cron": "^3.0.2",
+    "pdf-to-base64": "^1.0.3",
+    "sib-api-v3-sdk": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
