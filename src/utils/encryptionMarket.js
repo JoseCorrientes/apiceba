@@ -1,5 +1,5 @@
 // import { webcrypto } from "node:crypto";
-const { webcrypto }=require("node:crypto");
+const webcrypto =require("node:crypto");
 
 
 const { subtle } = webcrypto;
