@@ -1,11 +1,9 @@
 // import { webcrypto } from "node:crypto";
-const crypto = require('crypto').webcrypto;
 
 // const crypto =require("node:crypto");
 // const {webcrypto} = crypto;
-const subtle = new SubtleCrypto();
-
 // const { subtle } = webcrypto;
+const {subtle} = require('crypto').webcrypto;
 
 const {SALT_MARKET, KEY_MARKET} = process.env;
 const iv = new Uint8Array(16); // IV de 16 bytes
@@ -13,64 +11,32 @@ const iv = new Uint8Array(16); // IV de 16 bytes
 async function createKey() {
 
   try {
-
-
-
       const KEY = KEY_MARKET; // Replace with your key
-
       const SALT = SALT_MARKET; // Replace with your salt
-
-
       const secretKey = await subtle.importKey(
-
           "raw",
-
           KEY,
-
           { name: "PBKDF2" },
-
           false,
-
           ["deriveKey"]
-
       );
-
-
       const derivedKey = await subtle.deriveKey(
-
           {
-
               name: "PBKDF2",
-
               salt: SALT,
-
               iterations: 65536,
-
               hash: "SHA-512",
-
           },
-
           secretKey,
-
           { name: "AES-GCM", length: 256 },
-
           false,
-
           ["encrypt", "decrypt"]
-
       );
-
       return derivedKey;
-
-
   } catch (e) {
-
       console.error(e.message);
-
       return null;
-
   }
-
 }
 
 
