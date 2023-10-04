@@ -3,7 +3,9 @@
 // const crypto =require("node:crypto");
 // const {webcrypto} = crypto;
 // const { subtle } = webcrypto;
-const {subtle} = require('crypto').webcrypto;
+const crypto = require('crypto');
+
+const {subtle} = crypto.webcrypto;
 
 const {SALT_MARKET, KEY_MARKET} = process.env;
 const iv = new Uint8Array(16); // IV de 16 bytes
