@@ -1,5 +1,5 @@
 // import { Schema, model } from "mongoose";
-const { Schema, model } require=("mongoose");
+const { Schema, model } = require("mongoose");
 
 
 const paymentSchema = new Schema({
